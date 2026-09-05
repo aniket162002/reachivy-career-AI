@@ -7,8 +7,10 @@ import { assertBudget } from '@/lib/domain/wordBudget'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
-// Blueprint generation is the single heaviest model call in the app.
-export const maxDuration = 90
+// Blueprint generation is the single heaviest model call in the app. Capped at
+// 60s so the route deploys on Vercel Hobby, whose ceiling is 60s; Pro allows up
+// to 300 and this can be raised there if the strategist ever needs the headroom.
+export const maxDuration = 60
 
 /**
  * POST /api/sessions/[id]/generate-blueprint
