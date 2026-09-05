@@ -214,7 +214,7 @@ lib/
 supabase/migrations/    0002_session_state.sql
 scripts/migrate.mjs     idempotent migration runner
 tests/                  35 tests over the deterministic engines
-docs/                   architecture · product-flow · api · database · demo-script
+docs/                   architecture · product-flow · api · database · demo-script · recording-script
 ```
 
 ## Database
@@ -352,7 +352,7 @@ Because the LLM, STT and TTS all sit behind provider interfaces, moving off Gemi
 
 ## Demo scenario
 
-See `docs/demo-script.md` for the full 5–8 minute walkthrough. In short: start the app, hit **Listen**, hold the microphone and talk about a real experience, watch the right-hand panel fill in with values and quotes as you speak, and finish on a 350-word blueprint whose total is verified on the server.
+See `docs/recording-script.md` for a word-for-word recording script (every on-screen label verified against the build), or `docs/demo-script.md` for the shorter outline. In short: start the app, hit **Listen**, hold the microphone and talk about a real experience, watch the right-hand panel fill in with values and quotes as you speak, and finish on a 350-word blueprint whose total is verified on the server.
 
 ## Assumptions made
 
